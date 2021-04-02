@@ -1,0 +1,103 @@
+.content {
+  width: 100%;
+  margin-top: 76px;
+  margin-left: 76px;
+  margin-right: 76px;
+}
+
+.content-inner {
+  min-height: 100vh;
+  margin-top: 20px;
+  padding: 50px;
+  border: solid 1px lightgrey;
+  border-radius: 5px;
+}
+
+.content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+}
+
+.content-title {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 56px;
+}
+
+#btn-new-bill {
+  width: 350px;
+  height: 36px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 26px;
+
+  background-color: #0e5ae5;
+}
+
+#data-table {
+  box-sizing: border-box;
+  height: 70vh;
+  margin-top: 50px;
+  padding-bottom: 16px;
+  border: 2px solid #f3f5fa;
+  border-radius: 10px;
+
+  text-align: left;
+}
+
+.icon-actions {
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  align-items: center;
+}
+
+.table td,
+.table th,
+.table thead th {
+  border-top: 0px solid #fff !important;
+}
+
+thead {
+  text-align: left;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f3f5fa !important;
+}
+
+th,
+td {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+tr td:first-of-type {
+  font-weight: 500;
+}
+
+tr td:nth-of-type(2),
+tr td:nth-of-type(5) {
+  color: #0e5ae5;
+  font-weight: 500;
+}
+
+tr td:nth-of-type(3),
+tr th:nth-of-type(4) {
+  color: #979797;
+}

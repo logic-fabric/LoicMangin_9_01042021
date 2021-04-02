@@ -1,0 +1,89 @@
+.dashboard-form label {
+  margin-top: 20px;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  border-radius: 5px;
+
+  color: #0d5ae5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+
+  background: #f9f9f9;
+}
+
+.input-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textarea-field {
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: auto;
+
+  color: #0d5ae5;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 15px;
+
+  background: #f9f9f9;
+}
+
+#vat-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vat-flex {
+  width: 45%;
+}
+
+.file-flex {
+  box-sizing: border-box;
+  min-width: 325px;
+  max-width: 450px;
+  border: 2px solid #0d5ae5;
+  border-radius: 5px;
+
+  color: #fff;
+
+  background: #0d5ae5;
+  opacity: 0.5;
+}
+
+.icons-container span {
+  margin: 8px;
+}
+
+.buttons-flex {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 300px !important;
+  margin-top: 24px;
+}
+
+.buttons-flex button {
+  width: 100px !important;
+  background-color: #0d5ae5;
+}
+
+#icon-eye-d {
+  cursor: pointer;
+}
+
+#icon-download-d {
+  cursor: pointer;
+}
+
+#file-name-admin {
+  max-width: 300px;
+}

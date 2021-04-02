@@ -1,4 +1,4 @@
-import LoginView from "../views/LoginView.js";
+import loginView from "../views/loginView.js";
 
 const ROUTES_PATH = {
   login: "/",
@@ -10,7 +10,7 @@ const ROUTES_PATH = {
 export const ROUTES = ({ pathname, data, error, loading }) => {
   switch (pathname) {
     case ROUTES_PATH["login"]:
-      return LoginView();
+      return loginView();
     case ROUTES_PATH["bills"]:
       return "TO DO";
     case ROUTES_PATH["newBill"]:

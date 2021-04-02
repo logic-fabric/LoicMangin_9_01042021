@@ -1,4 +1,4 @@
-export default function LoginView() {
+export default function loginView() {
   return `
     <div class="page-div">
       <div class="row">
@@ -35,8 +35,7 @@ export default function LoginView() {
               </form>
             </div>
           </div>
-        </div>
-
+        </div>    
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">

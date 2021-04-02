@@ -1,0 +1,61 @@
+.layout {
+  display: flex;
+}
+
+.vertical-navbar {
+  width: 80px;
+  height: 150vh;
+
+  color: #fff;
+
+  background-color: #0e5ae5;
+}
+
+.layout-title {
+  position: relative;
+  top: 80px;
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 37px;
+
+  transform: rotate(-90deg);
+}
+
+#layout-icon1 {
+  position: relative;
+  top: 170px;
+
+  text-align: center;
+}
+
+#layout-icon2 {
+  position: relative;
+  top: 220px;
+
+  text-align: center;
+}
+
+#layout-disconnect {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.active-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border-radius: 8px;
+
+  background-color: #7bb1f7;
+}

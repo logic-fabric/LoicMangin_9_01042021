@@ -1,0 +1,132 @@
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-right-container {
+  position: absolute;
+  top: 50px;
+  left: 530px;
+
+  box-sizing: border-box;
+  width: calc(100% - 550px);
+  min-height: calc(100% - 92px);
+  padding: 23px;
+  border: 2px solid #f3f5fa;
+  border-radius: 10px;
+}
+
+.dashboard-form-container h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.bills-feed {
+  position: absolute;
+  top: 52px;
+  left: 120px;
+
+  width: 390px;
+}
+
+.status-bills-container {
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.status-bills-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-bills-container h3 {
+  display: flex;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.bill-card {
+  margin-top: 17px;
+  margin-bottom: 17px;
+  padding: 17px;
+  border-radius: 8px;
+
+  color: #fff;
+  letter-spacing: 0.2px;
+  line-height: 25px;
+
+  background: #0d5ae5;
+
+  cursor: pointer;
+}
+
+.bill-card-name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill-card-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bill-card-grey {
+  mix-blend-mode: normal;
+  opacity: 0.4;
+
+  cursor: pointer;
+}
+
+.name-price-container {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.date-type-container {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.centered-svg-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  height: 100vh;
+}
+
+#big-billed-icon {
+  margin-top: 100px;
+
+  text-align: center;
+}
+
+.dashboard-svg-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  transform: translate(-50%, -40%);
+}
+
+.arrow-icon {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
