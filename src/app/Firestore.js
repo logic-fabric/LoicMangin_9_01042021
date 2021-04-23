@@ -4,12 +4,25 @@ class Firestore {
     this.storage = window.firebase ? window.firebase.storage() : () => null;
   }
 
-  user = (uid) => this.store.doc(`users/${uid}`);
-  users = () => this.store.collection("users");
+  bills() {
+    return this.store.collection("bills");
+  }
 
-  ref = (path) => this.store.doc(path);
+  bill(billId) {
+    return this.store.doc(`bills/${billId}`);
+  }
 
-  bill = (bid) => this.store.doc(`bills/${bid}`);
-  bills = () => this.store.collection("bills");
+  ref(path) {
+    return this.store.doc(path);
+  }
+
+  users() {
+    return this.store.collection("users");
+  }
+
+  user(userId) {
+    return this.store.doc(`users/${userId}`);
+  }
 }
+
 export default new Firestore();
