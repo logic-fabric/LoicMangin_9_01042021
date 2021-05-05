@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1617271619848" clover="3.2.0">
-  <project timestamp="1617271619848" name="All files">
+<coverage generated="1620193289912" clover="3.2.0">
+  <project timestamp="1620193289912" name="All files">
     <metrics statements="220" coveredstatements="139" conditionals="102" coveredconditionals="73" methods="69" coveredmethods="38" elements="391" coveredelements="250" complexity="0" loc="220" ncloc="220" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
-      <file name="routes.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/constants/routes.js">
+      <file name="routes.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/constants/routes.js">
         <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="6" count="5" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
@@ -15,13 +15,13 @@
         <line num="22" count="3" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
-      <file name="usersTest.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/constants/usersTest.js">
+      <file name="usersTest.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/constants/usersTest.js">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="containers">
       <metrics statements="184" coveredstatements="105" conditionals="67" coveredconditionals="40" methods="54" coveredmethods="23"/>
-      <file name="Bills.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/containers/Bills.js">
+      <file name="Bills.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/containers/Bills.js">
         <metrics statements="25" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="10" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -49,7 +49,7 @@
         <line num="46" count="0" type="stmt"/>
         <line num="48" count="0" type="stmt"/>
       </file>
-      <file name="Dashboard.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/containers/Dashboard.js">
+      <file name="Dashboard.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/containers/Dashboard.js">
         <metrics statements="78" coveredstatements="70" conditionals="45" coveredconditionals="37" methods="25" coveredmethods="16"/>
         <line num="8" count="5" type="stmt"/>
         <line num="9" count="21" type="cond" truecount="4" falsecount="0"/>
@@ -130,7 +130,7 @@
         <line num="179" count="0" type="stmt"/>
         <line num="182" count="0" type="stmt"/>
       </file>
-      <file name="Login.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/containers/Login.js">
+      <file name="Login.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/containers/Login.js">
         <metrics statements="45" coveredstatements="28" conditionals="10" coveredconditionals="3" methods="9" coveredmethods="5"/>
         <line num="3" count="1" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
@@ -178,7 +178,7 @@
         <line num="83" count="0" type="stmt"/>
         <line num="85" count="2" type="stmt"/>
       </file>
-      <file name="Logout.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/containers/Logout.js">
+      <file name="Logout.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/containers/Logout.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="5" count="6" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
@@ -188,7 +188,7 @@
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
       </file>
-      <file name="NewBill.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/containers/NewBill.js">
+      <file name="NewBill.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/containers/NewBill.js">
         <metrics statements="29" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
@@ -223,11 +223,11 @@
     </package>
     <package name="views">
       <metrics statements="28" coveredstatements="26" conditionals="30" coveredconditionals="28" methods="14" coveredmethods="14"/>
-      <file name="Actions.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/Actions.js">
+      <file name="Actions.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/Actions.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="6" type="stmt"/>
       </file>
-      <file name="BillsUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/BillsUI.js">
+      <file name="BillsUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/BillsUI.js">
         <metrics statements="10" coveredstatements="8" conditionals="8" coveredconditionals="6" methods="5" coveredmethods="5"/>
         <line num="7" count="6" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
@@ -240,12 +240,12 @@
         <line num="48" count="0" type="stmt"/>
         <line num="51" count="5" type="stmt"/>
       </file>
-      <file name="DashboardFormUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/DashboardFormUI.js">
+      <file name="DashboardFormUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/DashboardFormUI.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="7" count="8" type="stmt"/>
         <line num="26" count="8" type="stmt"/>
       </file>
-      <file name="DashboardUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/DashboardUI.js">
+      <file name="DashboardUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/DashboardUI.js">
         <metrics statements="5" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="10" count="9" type="cond" truecount="2" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
@@ -253,23 +253,23 @@
         <line num="13" count="3" type="stmt"/>
         <line num="16" count="5" type="stmt"/>
       </file>
-      <file name="ErrorPage.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/ErrorPage.js">
+      <file name="ErrorPage.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/ErrorPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="5" type="stmt"/>
       </file>
-      <file name="LoadingPage.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/LoadingPage.js">
+      <file name="LoadingPage.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/LoadingPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
       </file>
-      <file name="LoginUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/LoginUI.js">
+      <file name="LoginUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/LoginUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="10" type="stmt"/>
       </file>
-      <file name="NewBillUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/NewBillUI.js">
+      <file name="NewBillUI.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/NewBillUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
       </file>
-      <file name="VerticalLayout.js" path="/Users/lowic/_frontend_projects/Projet No. 9/Billed-app-FR/src/views/VerticalLayout.js">
+      <file name="VerticalLayout.js" path="/Users/lowic/_frontend_projects/Projet No. 9/LoicMangin_9_01042021/src/views/VerticalLayout.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <line num="7" count="20" type="stmt"/>
         <line num="8" count="20" type="cond" truecount="2" falsecount="0"/>
