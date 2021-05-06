@@ -5,9 +5,9 @@ export const formatDate = (dateStr) => {
   const month = new Intl.DateTimeFormat("fr", { month: "short" }).format(date);
   const day = new Intl.DateTimeFormat("fr", { day: "2-digit" }).format(date);
 
-  month = month.charAt(0).toUpperCase() + month.slice(1);
+  const capMonth = month.charAt(0).toUpperCase() + month.slice(1);
 
-  return `${parseInt(day)} ${month.substr(0, 3)}. ${year
+  return `${parseInt(day)} ${capMonth.substr(0, 3)}. ${year
     .toString()
     .substr(2, 4)}`;
 };
@@ -19,6 +19,6 @@ export const formatStatus = (status) => {
     case "accepted":
       return "Accepté";
     case "refused":
-      return "Refused";
+      return "Refusé";
   }
 };
