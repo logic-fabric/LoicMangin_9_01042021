@@ -1,7 +1,5 @@
-
-export default () => {
-
-  return(`
+export default function LoginUI() {
+  return `
       <div class="page-div">
         <div class="row">
           <div class="title-container"> 
@@ -43,6 +41,5 @@ export default () => {
           </div>
         </div>
       </div>
-  `)
+  `;
 }
-  
