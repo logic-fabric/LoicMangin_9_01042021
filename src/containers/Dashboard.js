@@ -6,7 +6,7 @@ import { ROUTES_PATH } from "../constants/routes.js";
 
 import BigBilledIcon from "../assets/svg/big_billed.js";
 
-import USERS_TEST from "../constants/usersTest.js";
+import { USERS_TEST } from "../constants/usersTest.js";
 
 export const filteredBills = (data, status) => {
   return data && data.length
