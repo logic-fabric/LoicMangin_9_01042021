@@ -1,11 +1,11 @@
 import firestore from "./Firestore.js";
-import Login, { PREVIOUS_LOCATION } from "../containers/Login.js";
-import Bills from "../containers/Bills.js";
-import NewBill from "../containers/NewBill.js";
-import Dashboard from "../containers/Dashboard.js";
 
+import Bills from "../containers/Bills.js";
 import BillsUI from "../views/BillsUI.js";
+import Dashboard from "../containers/Dashboard.js";
 import DashboardUI from "../views/DashboardUI.js";
+import Login, { PREVIOUS_LOCATION } from "../containers/Login.js";
+import NewBill from "../containers/NewBill.js";
 
 import { ROUTES, ROUTES_PATH } from "../constants/routes.js";
 
@@ -184,7 +184,7 @@ export default function Router() {
         .getBillsAllUsers()
         .then((bills) => {
           rootDiv.innerHTML = DashboardUI({ data: { bills } });
-          
+
           new Dashboard({
             document,
             onNavigate,
