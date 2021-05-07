@@ -1,14 +1,15 @@
-import { screen } from "@testing-library/dom"
-import NewBillUI from "../views/NewBillUI.js"
-import NewBill from "../containers/NewBill.js"
+import NewBill from "../containers/NewBill.js";
+import NewBillUI from "../views/NewBillUI.js";
 
+//import { screen } from "@testing-library/dom";
 
-describe("Given I am connected as an employee", () => {
-  describe("When I am on NewBill Page", () => {
-    test("Then ...", () => {
-      const html = NewBillUI()
-      document.body.innerHTML = html
-      //to-do write assertion
-    })
-  })
-})
+describe("GIVEN I am connected as an employee", () => {
+  describe("WHEN I am on NewBill Page", () => {
+    test("THEN ...", () => {
+      const html = NewBillUI();
+      document.body.innerHTML = html;
+
+      // TO DO: write tests
+    });
+  });
+});
