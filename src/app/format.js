@@ -1,4 +1,11 @@
 export const formatDate = (dateStr) => {
+  // QUICK HACK: to handle invalid data coming from Firestore:
+  const [y, m, d] = dateStr.split("-");
+
+  if (y.length !== 4) return "date invalide";
+
+  // TO DO: check the date before sending data to Firestore
+
   const date = new Date(dateStr);
 
   const year = new Intl.DateTimeFormat("fr", { year: "numeric" }).format(date);
