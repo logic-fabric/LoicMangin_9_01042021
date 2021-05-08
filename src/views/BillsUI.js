@@ -3,6 +3,8 @@ import ErrorPage from "./ErrorPage.js";
 import LoadingPage from "./LoadingPage.js";
 import VerticalLayout from "./VerticalLayout.js";
 
+import { sortBillsByDate } from "../containers/Bills.js";
+
 const row = (bill) => {
   return `
     <tr>
@@ -19,7 +21,13 @@ const row = (bill) => {
 };
 
 const rows = (data) => {
-  return data && data.length ? data.map((bill) => row(bill)).join("") : "";
+  console.log(data);
+  
+  return data && data.length
+    ? sortBillsByDate(data)
+        .map((bill) => row(bill))
+        .join("")
+    : "";
 };
 
 export default function BillsUI({ data: bills, loading, error }) {
@@ -55,20 +63,20 @@ export default function BillsUI({ data: bills, loading, error }) {
           <button type="button" data-testid='btn-new-bill' class="btn btn-primary">Nouvelle note de frais</button>
         </div>
         <div id="data-table">
-        <table id="example" class="table table-striped" style="width:100%">
-          <thead>
-              <tr>
-                <th>Type</th>
-                <th>Nom</th>
-                <th>Date</th>
-                <th>Montant</th>
-                <th>Statut</th>
-                <th>Actions</th>
-              </tr>
-          </thead>
-          <tbody data-testid="tbody">
-            ${rows(bills)}
-          </tbody>
+          <table id="example" class="table table-striped" style="width:100%">
+            <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Nom</th>
+                  <th>Date</th>
+                  <th>Montant</th>
+                  <th>Statut</th>
+                  <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody data-testid="tbody">
+              ${rows(bills)}
+            </tbody>
           </table>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import BillsUI from "../views/BillsUI.js";
+import { convertToDate } from "../app/format.js";
 
 import { bills } from "../fixtures/bills.js";
 
@@ -19,10 +20,18 @@ describe("GIVEN I am connected as an employee", () => {
 
       const dates = screen
         .getAllByText(
-          /^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/i
+          /^([1-9]|[12][0-9]|3[01]) (Jan|Fév|Mar|Avr|Mai|Jui|Aou|Sep|Oct|Nov|Déc). ((19|20)\d\d)$/
         )
         .map((a) => a.innerHTML);
-      const antiChrono = (a, b) => (a < b ? 1 : -1);
+
+      const antiChrono = (date1, date2) => {
+        const d1 = convertToDate(date1);
+        const d2 = convertToDate(date2);
+
+        if (d1 < d2) return 1;
+        if (d1 > d2) return -1;
+        return 0;
+      };
       const datesSorted = [...dates].sort(antiChrono);
 
       expect(dates).toEqual(datesSorted);

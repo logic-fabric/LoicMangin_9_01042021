@@ -1,6 +1,6 @@
 import Logout from "./Logout.js";
 
-import { formatDate, formatStatus } from "../app/format.js";
+import { convertToDate, formatDate, formatStatus } from "../app/format.js";
 import { ROUTES_PATH } from "../constants/routes.js";
 
 export default class Bills {
@@ -69,3 +69,18 @@ export default class Bills {
     }
   };
 }
+
+export const sortBillsByDate = (bills) => {
+  const billsCopy = [...bills];
+
+  billsCopy.sort((bill1, bill2) => {
+    const date1 = convertToDate(bill1.date);
+    const date2 = convertToDate(bill2.date);
+
+    if (date1 < date2) return 1;
+    if (date1 > date2) return -1;
+    return 0;
+  });
+
+  return billsCopy;
+};
