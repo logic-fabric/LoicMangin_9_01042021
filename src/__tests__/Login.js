@@ -49,9 +49,7 @@ describe("GIVEN that I am a user on login page", () => {
 
       expect(screen.getByTestId("form-employee")).toBeTruthy();
     });
-  });
 
-  describe("WHEN I do fill fields in correct format and I click on employee button Login In", () => {
     test("THEN I should be identified as an Employee in app", () => {
       document.body.innerHTML = LoginUI();
 
@@ -121,9 +119,7 @@ describe("GIVEN that I am a user on login page", () => {
       expect(screen.getAllByText("Mes notes de frais")).toBeTruthy();
     });
   });
-});
 
-describe("GIVEN that I am a user on login page", () => {
   describe("WHEN I do not fill fields and I click on admin button Login In", () => {
     test("THEN It should renders Login page", () => {
       document.body.innerHTML = LoginUI();
