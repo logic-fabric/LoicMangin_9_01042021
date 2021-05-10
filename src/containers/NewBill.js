@@ -27,15 +27,29 @@ export default class NewBill {
       .files[0];
     const filePath = e.target.value.split(/\\/g);
     const fileName = filePath[filePath.length - 1];
+    const fileParts = fileName.split(".");
+    const fileExt = fileParts[fileParts.length - 1];
 
-    this.firestore.storage
-      .ref(`justificatifs/${fileName}`)
-      .put(file)
-      .then((snapshot) => snapshot.ref.getDownloadURL())
-      .then((url) => {
-        this.fileUrl = url;
-        this.fileName = fileName;
-      });
+    const errorMessage = document.querySelector(
+      '[data-testid="file-error-message"]'
+    );
+
+    if (["jpg", "jpeg", "png"].includes(fileExt.toLowerCaser())) {
+      this.firestore.storage
+        .ref(`justificatifs/${fileName}`)
+        .put(file)
+        .then((snapshot) => snapshot.ref.getDownloadURL())
+        .then((url) => {
+          this.fileUrl = url;
+          this.fileName = fileName;
+        });
+
+      errorMessage.classList.remove("show");
+    } else {
+      e.target.value = "";
+
+      errorMessage.classList.add("show");
+    }
   };
 
   handleSubmit = (e) => {

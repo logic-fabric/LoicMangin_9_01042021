@@ -55,6 +55,9 @@ export default function NewBillUI() {
                   <div class="col-half">
                     <label for="file" class="bold-label">Justificatif</label>
                     <input required type="file" class="form-control blue-border" data-testid="file" />
+                    <p class="error-message" data-testid="file-error-message">
+                      Fichier JPG, JPEG ou PNG uniquement
+                    </p>
                   </div>
                 </div>
             </div>
