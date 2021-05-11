@@ -12,21 +12,9 @@ Cloner le projet : `git clone https://github.com/logic-fabric/LoicMangin_9_01042
 
 Aller au repo cloné et installer les **packages npm** (indiqués dans le `package.json`) : `npm install`
 
-Installer **live-server** pour pouvoir lancer un serveur local : `npm install -g live-server`
-
-Lancer le serveur : `live-server`
-
-Aller à l'adresse : `http://127.0.0.1:8000/`
-
 ### Lancer les tests en local avec _Jest_
 
 `npm run test`
-
-### Lancer un seul test
-
-Installer **jest-cli** : `npm i -g jest-cli`
-
-Lancer le test avec : `jest src/__tests__/yourTestFile.js`
 
 ### Voir la couvertur de test
 
