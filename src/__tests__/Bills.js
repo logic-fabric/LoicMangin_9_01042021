@@ -6,7 +6,7 @@ import { bills } from "../fixtures/bills.js";
 import { screen } from "@testing-library/dom";
 
 describe("GIVEN I am connected as an employee", () => {
-  describe("WHEN I am on Bills Page", () => {
+  describe("WHEN I am on Bills page", () => {
     test("THEN bill icon in vertical layout should be highlighted", () => {
       const html = BillsUI({ data: [] });
       document.body.innerHTML = html;
@@ -35,6 +35,24 @@ describe("GIVEN I am connected as an employee", () => {
       const datesSorted = [...dates].sort(antiChrono);
 
       expect(dates).toEqual(datesSorted);
+    });
+  });
+
+  describe("WHEN I am on Bills page but it is loading", () => {
+    test("THEN Loading page should be rendered", () => {
+      const html = BillsUI({ loading: true });
+      document.body.innerHTML = html;
+
+      expect(screen.getAllByText("Loading...")).toBeTruthy();
+    });
+  });
+
+  describe("WHEN I am on Bills page but back-end send an error message", () => {
+    test("THEN Error page should be rendrered", () => {
+      const html = BillsUI({ error: "some error message" });
+      document.body.innerHTML = html;
+
+      expect(screen.getAllByText("Erreur")).toBeTruthy();
     });
   });
 });
