@@ -67,6 +67,10 @@
   align-items: center;
 }
 
+.icon-actions div {
+  cursor: pointer;
+}
+
 .table td,
 .table th,
 .table thead th {

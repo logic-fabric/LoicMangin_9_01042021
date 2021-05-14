@@ -17,7 +17,7 @@ export default class Bills {
       buttonNewBill.addEventListener("click", this.handleClickNewBill);
     }
 
-    const iconEye = document.querySelectorAll(`div[data-testid="icon-eye"]`);
+    const iconEye = document.querySelectorAll(`[data-bill-url]`);
 
     if (iconEye) {
       iconEye.forEach((icon) => {
@@ -41,7 +41,9 @@ export default class Bills {
       .html(
         `<div style='text-align: center;'><img width=${imgWidth} src=${billUrl} /></div>`
       );
-    $("#modaleFile").modal("show");
+
+    if (typeof $("#modaleFile").modal === "function")
+      $("#modaleFile").modal("show");
   };
 
   // No need to cover this function by tests:

@@ -22,8 +22,7 @@ describe("GIVEN I am connected as an employee", () => {
         })
       );
 
-      const html = BillsUI({ data: [] });
-      document.body.innerHTML = html;
+      document.body.innerHTML = BillsUI({ data: [] });
 
       const billIcon = screen.getByTestId("icon-window");
 
@@ -31,8 +30,7 @@ describe("GIVEN I am connected as an employee", () => {
     });
 
     test("THEN bills should be ordered from earliest to latest", () => {
-      const html = BillsUI({ data: bills });
-      document.body.innerHTML = html;
+      document.body.innerHTML = BillsUI({ data: bills });
 
       const dates = screen
         .getAllByText(
@@ -44,9 +42,8 @@ describe("GIVEN I am connected as an employee", () => {
         const d1 = convertToDate(date1);
         const d2 = convertToDate(date2);
 
-        if (d1 < d2) return 1;
+        if (d1 <= d2) return 1;
         if (d1 > d2) return -1;
-        return 0;
       };
       const datesSorted = [...dates].sort(antiChrono);
 
@@ -118,6 +115,48 @@ describe("GIVEN I am connected as an employee", () => {
       expect(handleClickNewBill).toHaveBeenCalled();
 
       expect(screen.getByText("Envoyer une note de frais")).toBeTruthy();
+    });
+  });
+
+  describe("WHEN I am on Bills page and I click on an icon eye", () => {
+    test("THEN a modal should open", () => {
+      Object.defineProperty(window, "localStorage", {
+        value: localStorageMock,
+      });
+      window.localStorage.setItem(
+        "user",
+        JSON.stringify({
+          type: "Employee",
+        })
+      );
+
+      document.body.innerHTML = BillsUI({ data: bills });
+
+      const onNavigate = (pathname) => {
+        document.body.innerHTML = ROUTES({ pathname });
+      };
+
+      const firestore = null;
+
+      const billsContainer = new Bills({
+        document,
+        onNavigate,
+        firestore,
+        localStorage: window.localStorage,
+      });
+
+      const iconEye = screen.getByTestId("icon-eye47qAXb6fIm2zOKkLzMro");
+      const handleClickIconEye = jest.fn(
+        billsContainer.handleClickIconEye(iconEye)
+      );
+      iconEye.addEventListener("click", handleClickIconEye);
+      userEvent.click(iconEye);
+
+      expect(handleClickIconEye).toHaveBeenCalled();
+
+      const modale = screen.getByTestId("modaleFile");
+
+      expect(modale).toBeTruthy();
     });
   });
 });
