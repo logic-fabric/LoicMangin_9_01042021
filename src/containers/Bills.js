@@ -77,9 +77,8 @@ export const sortBillsByDate = (bills) => {
     const date1 = convertToDate(bill1.date);
     const date2 = convertToDate(bill2.date);
 
-    if (date1 < date2) return 1;
+    if (date1 <= date2) return 1;
     if (date1 > date2) return -1;
-    return 0;
   });
 
   return billsCopy;

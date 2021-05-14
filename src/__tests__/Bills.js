@@ -2,16 +2,29 @@ import BillsUI from "../views/BillsUI.js";
 import { convertToDate } from "../app/format.js";
 
 import { bills } from "../fixtures/bills.js";
+import { localStorageMock } from "../__mocks__/localStorage.js";
 
 import { screen } from "@testing-library/dom";
 
 describe("GIVEN I am connected as an employee", () => {
   describe("WHEN I am on Bills page", () => {
-    test("THEN bill icon in vertical layout should be highlighted", () => {
+    test("THEN bill icon in vertical layout should be present", () => {
+      Object.defineProperty(window, "localStorage", {
+        value: localStorageMock,
+      });
+      window.localStorage.setItem(
+        "user",
+        JSON.stringify({
+          type: "Employee",
+        })
+      );
+
       const html = BillsUI({ data: [] });
       document.body.innerHTML = html;
 
-      // TO DO: write expect expression
+      const billIcon = screen.getByTestId("icon-window");
+
+      expect(billIcon).toBeTruthy();
     });
 
     test("THEN bills should be ordered from earliest to latest", () => {
