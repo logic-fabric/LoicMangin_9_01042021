@@ -308,7 +308,7 @@ describe("GIVEN I am a user connected as Admin", () => {
       const html = DashboardUI({ error: "Erreur 404" });
       document.body.innerHTML = html;
 
-      const message = await screen.getByText(/Erreur 404/);
+      const message = screen.getByText(/Erreur 404/);
 
       expect(message).toBeTruthy();
     });
@@ -321,7 +321,7 @@ describe("GIVEN I am a user connected as Admin", () => {
       const html = DashboardUI({ error: "Erreur 500" });
       document.body.innerHTML = html;
 
-      const message = await screen.getByText(/Erreur 500/);
+      const message = screen.getByText(/Erreur 500/);
 
       expect(message).toBeTruthy();
     });
