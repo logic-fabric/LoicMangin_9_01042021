@@ -1,3 +1,4 @@
+import Bills from "../containers/Bills.js";
 import BillsUI from "../views/BillsUI.js";
 import { convertToDate } from "../app/format.js";
 
@@ -48,6 +49,17 @@ describe("GIVEN I am connected as an employee", () => {
       const datesSorted = [...dates].sort(antiChrono);
 
       expect(dates).toEqual(datesSorted);
+    });
+  });
+
+  describe("WHEN I am on Bills page and there are no bills", () => {
+    test("THEN the bills table should be empty", () => {
+      const html = BillsUI({ data: [] });
+      document.body.innerHTML = html;
+
+      const eyeIcon = screen.queryByTestId("icon-eye");
+
+      expect(eyeIcon).toBeNull();
     });
   });
 
