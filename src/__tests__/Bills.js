@@ -1,11 +1,13 @@
 import Bills from "../containers/Bills.js";
 import BillsUI from "../views/BillsUI.js";
 import { convertToDate } from "../app/format.js";
+import { ROUTES } from "../constants/routes.js";
 
 import { bills } from "../fixtures/bills.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
 
 import { screen } from "@testing-library/dom";
+import userEvent from "@testing-library/user-event";
 
 describe("GIVEN I am connected as an employee", () => {
   describe("WHEN I am on Bills page", () => {
@@ -78,6 +80,44 @@ describe("GIVEN I am connected as an employee", () => {
       document.body.innerHTML = html;
 
       expect(screen.getAllByText("Erreur")).toBeTruthy();
+    });
+  });
+
+  describe("WHEN I am on Bills page and I click on the new bill button", () => {
+    test("THEN I should be sent to new bill page", () => {
+      Object.defineProperty(window, "localStorage", {
+        value: localStorageMock,
+      });
+      window.localStorage.setItem(
+        "user",
+        JSON.stringify({
+          type: "Employee",
+        })
+      );
+
+      document.body.innerHTML = BillsUI({ bills });
+
+      const onNavigate = (pathname) => {
+        document.body.innerHTML = ROUTES({ pathname });
+      };
+
+      const firestore = null;
+
+      const billsContainer = new Bills({
+        document,
+        onNavigate,
+        firestore,
+        localStorage: window.localStorage,
+      });
+
+      const handleClickNewBill = jest.fn(billsContainer.handleClickNewBill);
+      const newBillButton = screen.getByTestId("btn-new-bill");
+      newBillButton.addEventListener("click", handleClickNewBill);
+      userEvent.click(newBillButton);
+
+      expect(handleClickNewBill).toHaveBeenCalled();
+
+      expect(screen.getByText("Envoyer une note de frais")).toBeTruthy();
     });
   });
 });
