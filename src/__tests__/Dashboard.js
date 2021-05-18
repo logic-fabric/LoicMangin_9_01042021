@@ -3,9 +3,9 @@ import DashboardFormUI from "../views/DashboardFormUI.js";
 import DashboardUI from "../views/DashboardUI.js";
 import { ROUTES } from "../constants/routes";
 
-import { bills } from "../fixtures/bills";
+import { bills } from "../fixtures/bills.js";
 import { localStorageMock } from "../__mocks__/localStorage.js";
-import firebase from "../__mocks__/firebase";
+import firebase from "../__mocks__/firebase.js";
 
 import { fireEvent, screen } from "@testing-library/dom";
 import userEvent from "@testing-library/user-event";

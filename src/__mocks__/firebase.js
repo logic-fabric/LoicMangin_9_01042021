@@ -1,3 +1,5 @@
+import firebase from "./firebase.js";
+
 export default {
   get: () => {
     return Promise.resolve({
@@ -66,6 +68,30 @@ export default {
           commentary: "test2",
           status: "refused",
           commentAdmin: "pas la bonne facture",
+        },
+      ],
+    });
+  },
+  post: async (request) => {
+    const bills = await firebase.get();
+
+    return Promise.resolve({
+      data: [
+        ...bills.data,
+        {
+          id: request.id,
+          email: request.email,
+          type: request.type,
+          name: request.name,
+          date: request.date,
+          amount: request.amount,
+          pct: request.pct,
+          vat: request.vat,
+          fileName: request.fileName,
+          fileUrl: request.fileUrl,
+          commentary: request.commentary,
+          status: request.status,
+          commentAdmin: request.commentaryAdmin,
         },
       ],
     });
