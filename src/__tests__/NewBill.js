@@ -94,9 +94,13 @@ describe("GIVEN I am connected as an Employee", () => {
 
       expect(handleChangeFile).toHaveBeenCalled();
 
-      const errorMessage = screen.getByText(/JPG, JPEG ou PNG uniquement/i);
+      expect(fileInput.files[0].name).toBe("document.pdf");
 
-      expect(errorMessage).toBeTruthy();
+      const errorMessage = screen.getByTestId("file-error-message");
+
+      expect(errorMessage.textContent).toEqual(
+        expect.stringContaining("JPG, JPEG ou PNG uniquement")
+      );
     });
   });
 
@@ -140,9 +144,11 @@ describe("GIVEN I am connected as an Employee", () => {
 
       expect(handleChangeFile).toHaveBeenCalled();
 
-      const errorMessage = screen.getByText(/JPG, JPEG ou PNG uniquement/i);
+      expect(fileInput.files[0].name).toBe("image.png");
 
-      expect(errorMessage).toBeFalsy();
+      const errorMessage = screen.getByTestId("file-error-message");
+
+      expect(errorMessage.textContent).toBe("");
     });
   });
 });

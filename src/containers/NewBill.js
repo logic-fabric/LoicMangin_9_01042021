@@ -25,7 +25,7 @@ export default class NewBill {
   handleChangeFile = (e) => {
     const file = this.document.querySelector(`input[data-testid="file"]`)
       .files[0];
-    const filePath = e.target.value.split(/\\/g);
+    const filePath = file.name.split(/\\/g);
     const fileName = filePath[filePath.length - 1];
     const fileNameParts = fileName.split(".");
     const fileExt = fileNameParts[fileNameParts.length - 1];
@@ -38,14 +38,16 @@ export default class NewBill {
       errorMessage.classList.remove("show");
       errorMessage.textContent = "";
 
-      this.firestore.storage
-        .ref(`justificatifs/${fileName}`)
-        .put(file)
-        .then((snapshot) => snapshot.ref.getDownloadURL())
-        .then((url) => {
-          this.fileUrl = url;
-          this.fileName = fileName;
-        });
+      if (this.firestore) {
+        this.firestore.storage
+          .ref(`justificatifs/${fileName}`)
+          .put(file)
+          .then((snapshot) => snapshot.ref.getDownloadURL())
+          .then((url) => {
+            this.fileUrl = url;
+            this.fileName = fileName;
+          });
+      }
     } else {
       e.target.value = "";
 
