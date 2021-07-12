@@ -1,8 +1,5 @@
 /node_modules
 /.vscode
-/coverage/lcov-report
+coverage
 
 .DS_Store
-clover.xml
-coverage-final.json
-lcov.info
